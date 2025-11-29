@@ -1,0 +1,51 @@
+#logo-modal {
+  width: 5px;
+  height: auto;
+  object-fit: cover;
+}
+.promo-inicial {
+  height: 40vw;
+  width: 40vw;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.btn-outline-success{
+  color: #71B346;
+}
+.btn-outline-success:hover{
+  color: white;
+  background-color: #71B346;
+}
+.btn-succes{
+  color: white;
+  background-color: #71B346;
+}
+.borde{
+  border-top: 1px solid #cccccc6e;
+  padding-top: 10px;
+}
+.item-nav{
+  border-bottom: 2px solid rgb(255, 255, 255);
+  color: rgba(0, 0, 0, 0.542);
+  font-weight: 400;
+  font-size: 0.83em;
+  transition: border-bottom 0.2s ease-out;
+}
+.item-nav:hover {
+  color: black;
+  border-bottom: 2px solid rgb(11, 161, 24);
+}
+
+@media (width <=800px) {
+  .logo {
+    width: 40% !important;
+  }
+  .promo-inicial {
+    height: 75vw;
+    width: 75vw;
+  }
+  .nav-item-primary {
+    font-size: 11px;
+  }
+}

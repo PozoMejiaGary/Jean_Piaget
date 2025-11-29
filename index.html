@@ -2,50 +2,159 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <title>Jean Piaget</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="iconAndFonts/bootstrap-icons.css">
+  <link rel="stylesheet" href="styles/styles.css">
+  <title>Jean Piaget</title>
 </head>
 
 <body>
-    <!--Navbar-->
-    <nav class="navbar navbar-expand-lg bg-success">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img src="img/logo2.png"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
-                </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
-                
-            </div>
+  <!--Navbar-->
+  <header class="container">
+    <div class="d-flex justify-content-between align-items-center">
+      <a class="navbar-brand w-25 logo" href="index.html">
+          <img src="img/logo2.png" alt="Jean Piaget" class="img-fluid"/>
+      </a>
+      <div class="d-none d-xl-flex justify-content-center">
+        <div class="d-flex flex-wrap gap-2 container">
+          <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
+              data-bs-target="#inicio-sesion"><i class="bi bi-person"></i> Iniciar Sesion</button>
+          <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
+              data-bs-target="#">Ño che :c</button>
         </div>
-    </nav>
+      </div>
+      
+      <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar" />
+          <button class="btn btn-outline-success" type="submit"><i class="bi bi-search"></i></button>
+        </form>
+    </div>
+  </header>
 
-    <!--Nav-->
-    <ul class="nav justify-content-center">
-        <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Talleres</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-        </li>
-    </ul>
+  <!--Nav-->
+  <nav class="navbar navbar-expand-md d-none d-none d-xl-flex borde">
+    <div class="container">
+      <div class="navbar-collapse d-flex justify-content-center" id="navbarNav">
+        <ul class="navbar-nav d-flex justify-content-between w-100">
+          <li class="nav-item item-nav">
+            <a class="nav-link" href="#">Talleres</a>
+          </li>
+          <li class="nav-item item-nav">
+            <a class="nav-link" href="#">Cursos</a>
+          </li>
+          <li class="nav-item item-nav">
+            <a class="nav-link" href="#">Verano</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-    <img src="img/R.jpg" class="img-fluid">
-    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <img src="img/banner2 (Mediana).jpg" class="img-fluid">
+
+  <footer class="bg-dark text-light py-5">
+    <div class="container">
+      <div class="row text-center justify-content-center text-md-start">
+        <div class="col-md-3 mb-1">
+          <h6 class="fw-bold">Contáctate con nosotros</h6>
+          <p><i class="bi bi-telephone"></i> (+51) 952 897 315</p>
+          <p><i class="bi bi-telephone-inbound"></i> 0800 10064</p>
+          <p><i class="bi bi-clock"></i> Lun - Dom · 8:00 am – 9:00 pm</p>
+          <p>
+            <i class="bi bi-building"></i> Calle Real N° 341 - 343, Huancayo
+          </p>
+        </div>
+        <div class="col-md-3 mb-1">
+          <h6 class="fw-bold">Síguenos</h6>
+          <div class="d-flex justify-content-center justify-content-md-start gap-3 flex-wrap">
+            <a href="https://www.facebook.com/jean.piaget.3785373" target="_blank"><i
+                class="bi bi-facebook fs-5 text-white"></i></a>
+            <a href="https://www.twitter.com/cajahuancayo" target="_blank"><i
+                class="bi bi-twitter fs-5 text-white"></i></a>
+            <a href="https://www.instagram.com/caja_huancayo" target="_blank"><i
+                class="bi bi-instagram fs-5 text-white"></i></a>
+            <a href="https://api.whatsapp.com/send/?phone=51950989245" target="_blank"><i
+                class="bi bi-whatsapp fs-5 text-white"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="text-center border-top border-secondary pt-3 mt-4">
+        <small>&copy; Jean Piaget 2025. Todos los derechos reservados.</small>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modales -->
+    <div class="modal fade" id="modalverano" tabindex="-1" aria-hidden="true" data-bs-focus="false">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content p-0 border-0 bg-transparent shadow-none promo-inicial">
+          <!-- Botón cerrar arriba a la derecha -->
+          <button type="button" class="btn-close position-absolute top-0 end-0 m-2 z-3 bg-white rounded-circle p-2"
+            data-bs-dismiss="modal" aria-label="Close"></button>
+
+          <!-- Imagen del banner -->
+          <a href="https://www.cajahuancayo.com.pe/PCM_AtenCliente/PCM_frmRegConDat.aspx"><img src="img/Verano.jpg"
+              alt="Vacaciones" class="img-fluid w-100 rounded" /></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal de inicio de sesion -->
+     <div class="modal fade" id="inicio-sesion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <button type="button" class="btn-close position-absolute top-0 end-0 m-2 z-3 bg-white rounded-circle p-2"
+            data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-header border-0 d-flex flex-column align-items-center pt-4 pb-3">
+              <h5 class="modal-title fw-bold mb-0" id="exampleModalLabel">Iniciar Sesion</h5>
+            </div>
+
+            <div class="modal-body">
+              <div class="mb-3">
+                <label class="form-label fw-normal" style="font-size: 0.9rem"><i class="bi bi-person-vcard-fill"></i> DNI</label>
+                <input type="text" class="form-control" id="dni">
+              </div>
+              <div class="mb-4">
+                <label class="form-label fw-normal" style="font-size: 0.9rem"><i class="bi bi-lock-fill"></i> Contraseña</label>
+                <div class="input-group">
+                  <input type="password" id="contrasena" class="form-control"/>
+                </div>
+              </div>
+              <button id="btn-login" typo="submit" class="btn btn-success btn-succes w-100 py-2 fw-semibold">Iniciar Sesion</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.getElementById("btn-login").addEventListener("click", async () => {
+        const dni = document.getElementById("dni").value;
+        const contrasena = document.getElementById("contrasena").value;
+
+        if (!dni || !contrasena) {
+          alert("Complete ambos campos");
+          return;
+        }
+
+        const res = await fetch("http://localhost:3000/login", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ dni, contrasena })
+        });
+
+        const data = await res.json();
+
+        if (!data.ok) {
+          alert("DNI o contraseña incorrectos");
+        } else {
+          alert("Bienvenida " + data.nombre);
+        }
+      });
+    </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
