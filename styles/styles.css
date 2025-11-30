@@ -36,7 +36,13 @@
   color: black;
   border-bottom: 2px solid rgb(11, 161, 24);
 }
-
+.table-bordered{
+  border-color: black;
+  border-radius: 20px;
+}
+.btn-succes{
+  
+}
 @media (width <=800px) {
   .logo {
     width: 40% !important;
