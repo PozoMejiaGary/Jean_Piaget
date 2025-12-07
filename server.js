@@ -18,7 +18,29 @@ const directoras = mongoose.model("directoras", new mongoose.Schema({
   nombre: String
 }));
 
-// 📥 Endpoint para guardar datos
+//Modelo Alumno
+const Alumno = mongoose.model(
+  "Alumno",
+  new mongoose.Schema({
+    dni: String,
+    nombre_completo: String,
+    fecha_nacimiento: String,
+    lugar_nacimiento: String,
+    tutor: {
+      dni: String,
+      nombre_completo: String,
+      telefono_padre: String,
+      telefono_madre: String,
+      email: String
+    },
+    cursos: Array,
+    talleres: Array,
+    edad: String
+  }),
+  "alumnos"
+);
+
+// 📥 Endpoint para login
 app.post("/login", async (req, res) => {
   const { dni, contrasena } = req.body;
 
@@ -33,6 +55,29 @@ app.post("/login", async (req, res) => {
     mensaje: "Login exitoso",
     nombre: usuaria.nombre
   });
+});
+
+// 🔹 Endpoint para obtener la lista de alumnos
+app.get("/alumnos", async (req, res) => {
+  try {
+    const alumnos = await Alumno.find({});
+
+    const lista = alumnos.map(a => ({
+      dni: a.dni,
+      nombre: a.nombre_completo,
+      fecha_nacimiento: a.fecha_nacimiento,
+      dni_tutor: a.tutor?.dni,
+      nombre_tutor: a.tutor?.nombre_completo,
+      edad: a.edad
+    }));
+
+    console.log(lista); // puedes dejarlo para verificación
+    res.json(lista);
+
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: "Error al obtener alumnos" });
+  }
 });
 
 // 🚀 Iniciar servidor

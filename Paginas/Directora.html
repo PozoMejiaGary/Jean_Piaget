@@ -1,15 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="iconAndFonts/bootstrap-icons.css">
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../iconAndFonts/bootstrap-icons.css">
+    <link rel="stylesheet" href="../styles/styles2.css">
     <title>Document</title>
 </head>
-<body>
 
+<body class="body">
+    <div class="d-flex justify-content-center align-items-center vh-100 logueo">
+        <div class="p-4 bg-white rounded shadow" style="width: 350px;">
+            <h1 class="fw-bold text-center">Inicio de sesion</h1>    
+        <form class="borde" method="post">
+            <div>
+                <label class="form-label fw-normal" style="font-size: 0.9rem"><i class="bi bi-person-vcard-fill"></i>
+                    DNI</label>
+                <input type="text" class="form-control" id="dni">
+            </div>
+            <div class="mb-4">
+                <label class="form-label fw-normal" style="font-size: 0.9rem"><i class="bi bi-lock-fill"></i>
+                    Contraseña</label>
+                <div class="input-group">
+                    <input type="password" id="contrasena" class="form-control" />
+                </div>
+            </div>
+            <button id="btn-login" typo="submit" class="btn btn-success btn-succes w-100 py-2 fw-semibold">Iniciar
+                Sesion</button>
+        </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("btn-login").addEventListener("click", async () => {
+            const dni = document.getElementById("dni").value;
+            const contrasena = document.getElementById("contrasena").value;
+
+            if (!dni || !contrasena) {
+                alert("Complete ambos campos");
+                return;
+            }
+
+            const res = await fetch("http://localhost:3000/login", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ dni, contrasena })
+            });
+
+            const data = await res.json();
+
+            if (!data.ok) {
+                alert("DNI o contraseña incorrectos");
+            } else {
+                alert("Bienvenida " + data.nombre);
+                window.location.href="../index.html";
+            }
+        });
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

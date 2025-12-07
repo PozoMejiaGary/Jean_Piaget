@@ -40,9 +40,6 @@
   border-color: black;
   border-radius: 20px;
 }
-.btn-succes{
-  
-}
 @media (width <=800px) {
   .logo {
     width: 40% !important;
