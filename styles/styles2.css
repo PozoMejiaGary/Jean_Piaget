@@ -1,8 +1,8 @@
 .body{
   margin: 0;
   padding: 0;
-  background: linear-gradient(150deg, rgb(255, 255, 255), rgb(97, 194, 97));
-  height: 100vh;
+  background: linear-gradient(150deg, rgb(72, 136, 53), rgb(235, 235, 235));
+  height: 50vh;
 }
 .logueo{
     background: whi;
@@ -11,4 +11,70 @@
 .borde{
   border-top: 1px solid #cccccc6e;
   padding-top: 10px;
+}
+.subt{
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+  height: 30px;
+  width: 140px;
+}
+.btn-custom {
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 8px 40px;
+  border-width: 2.5px;
+  border-radius: 12px;
+}
+
+.titulo{
+  font-size: 3.5rem;
+}
+.bajotitulo{
+  font-size: 1.2rem;
+}
+
+.btn-outline-dark{
+  background-color: white;
+}
+.btn-outline-dark:active{
+  transform: scale(0.96);
+}
+
+.btn.btn-verde,
+.btn.btn-verde:hover,
+.btn.btn-verde:focus,
+.btn.btn-verde:active,
+.btn.btn-verde.active {
+  background-color: #13811c !important;
+  border-color: #13811c !important;
+  color: #fff !important;
+}
+
+.btn.btn-verde:hover {
+  background-color: #086305 !important;
+  border-color: #086305 !important;
+}
+
+/* Click */
+.btn.btn-verde:active {
+  background-color: #086305 !important;
+  border-color: #086305 !important;
+  transform: scale(0.96);
+}
+
+/* Eliminar efectos Bootstrap */
+.btn.btn-verde:focus,
+.btn.btn-verde:active {
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.duracion{
+  color: #13811c;
+}
+.edad{
+  color: #154770;
+}
+.imagen{
+  border-radius: 15px;
 }

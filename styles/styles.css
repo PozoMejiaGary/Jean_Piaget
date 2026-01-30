@@ -50,6 +50,23 @@
 .fundadora{
   border-radius: 100px;
 }
+.card-img-top {
+  height: 200px;
+  object-fit: cover !important;
+}
+.scroll-cards {
+  white-space: normal; 
+}
+.card-width-370 {
+  width: 370px;
+}
+.genio{
+  border-radius: 200px;
+}
+.card h6 {
+  white-space: normal;
+  word-wrap: break-word;
+}
 @media (width <=800px) {
   .logo {
     width: 40% !important;
