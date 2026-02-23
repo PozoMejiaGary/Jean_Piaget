@@ -1,0 +1,33 @@
+.item-nav{
+  border-bottom: 2px solid rgb(255, 255, 255);
+  color: rgba(0, 0, 0, 0.542);
+  font-weight: 400;
+  font-size: 0.83em;
+  transition: border-bottom 0.2s ease-out;
+}
+.item-nav:hover {
+  color: black;
+  border-bottom: 2px solid rgb(11, 161, 24);
+}
+.borde{
+  border-top: 1px solid #cccccc6e;
+  padding-top: 10px;
+}
+.imagen{
+  border-radius: 15px;
+}
+.lista{
+  display: block;
+  border-left: 3px solid transparent;
+  padding-left: 12px;
+  transition: border-left 0.2s ease-out, color 0.2s ease-out;
+}
+.lista:hover{
+  color: black;
+  border-left: 3px solid rgb(11, 161, 24);
+}
+.lista.active {
+  color: black;
+  border-left: 3px solid rgb(11, 161, 24);
+  font-weight: 500;
+}

@@ -1,0 +1,60 @@
+.item-nav{
+  border-bottom: 2px solid rgb(255, 255, 255);
+  color: rgba(0, 0, 0, 0.542);
+  font-weight: 400;
+  font-size: 0.83em;
+  transition: border-bottom 0.2s ease-out;
+}
+.item-nav:hover {
+  color: black;
+  border-bottom: 2px solid rgb(11, 161, 24);
+}
+.borde{
+  border-top: 1px solid #cccccc6e;
+  padding-top: 10px;
+}
+
+.seccion-imagen {
+  background-image: url("../img/mariposa.jpg"); /* tu imagen */
+  background-size: cover;
+  background-position: center;
+  height: 450px;
+  position: relative;
+}
+.seccion-imagen .overlay {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.titulo-degradado {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #60a5fa, #c4b5fd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.titulo-degradado span {
+  background: linear-gradient(90deg, #60a5fa, #c4b5fd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.subtitulo {
+  color: #6b7280;
+  font-size: 1rem;
+}
+
+.fondo{
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(150deg, rgb(210, 224, 255), rgb(26, 47, 236));
+}
+.titulo{
+  font-size: 3.5rem;
+}
+
+@media (max-width: 768px) {
+  .titulo-degradado {
+    font-size: 2rem;
+  }
+}
